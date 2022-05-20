@@ -1,0 +1,27 @@
+{
+  "name": "odd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon server.js",
+    "front": "cd odd && npm start",
+    "dev": "concurrently \"npm run server\" \"npm run front\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gkswjdgns59/ODD_idkaist.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gkswjdgns59/ODD_idkaist/issues"
+  },
+  "homepage": "https://github.com/gkswjdgns59/ODD_idkaist#readme",
+  "dependencies": {
+    "concurrently": "^7.2.0",
+    "express": "^4.18.1",
+    "nodemon": "^2.0.16"
+  }
+}
