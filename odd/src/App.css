@@ -1,1 +1,7 @@
-/* blank css */
+body {
+    margin: 0;
+    overflow: hidden;
+    -ms-user-select: none; 
+    -webkit-user-select: none;
+    user-select: none;
+}
