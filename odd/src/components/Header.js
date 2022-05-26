@@ -3,6 +3,7 @@ import styles from "./ui.module.css";
 
 export default function Header() {
     const [open, setOpen] = useState(false);
+    const [open2, setOpen2] = useState(false);
     
     return (
         <>
@@ -29,7 +30,14 @@ export default function Header() {
             {open &&
                 <div className={styles.menu}>
                     <div className={styles.menuText}>About us</div>
-                    <div className={styles.menuText}>Language</div>
+                    {open2 
+                    ? <div className={styles.menuText} onClick={() => setOpen2(!open2)}>
+                        Language: Korean
+                    </div>
+                    : <div className={styles.menuText} onClick={() => setOpen2(!open2)}>
+                        Language: English
+                    </div>
+                    }
                     <div className={styles.menuText}>Setting</div>
                 </div>
             }
