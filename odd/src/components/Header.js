@@ -5,7 +5,7 @@ export default function Header() {
     const [open, setOpen] = useState(false);
     
     return (
-        <>
+        <div className={styles.headerWrapper}>
             <div className={styles.header}>
                 <div className={styles.leftHeader}>
                     <img
@@ -33,6 +33,6 @@ export default function Header() {
                     <div className={styles.menuText}>Setting</div>
                 </div>
             }
-        </>
+        </div>
     )
 }
