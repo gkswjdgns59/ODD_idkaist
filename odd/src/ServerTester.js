@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import socket from "./socket-client";
+import styles from "./components/ui.module.css";
 
 export default function ServerTester() {
     const [list, setList] = useState({});
@@ -24,7 +25,7 @@ export default function ServerTester() {
     }, []);
 
     return (
-        <>
+        <div className={styles.tester}>
             <div>
                 my userID : {socket.id}
             </div>
@@ -35,6 +36,6 @@ export default function ServerTester() {
                 roommates :
                 {roomMate.map((value, idx) => (<li key={idx}>{value}</li>))}
             </ul>
-        </>
+        </div>
     )
 }
