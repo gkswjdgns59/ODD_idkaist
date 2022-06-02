@@ -1,6 +1,6 @@
 import './App.css';
 import Header from './components/Header';
-import Example from './components/Circle_test';
+import Example from './components/Ghost';
 import Phaser from "phaser";
 
 const config = {

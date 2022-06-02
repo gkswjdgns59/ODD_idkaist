@@ -5,17 +5,13 @@ class Example extends Phaser.Scene
     constructor ()
     {
         super();
-
-        // this.cx = 150;
-        // this.cy = window.innerHeight-200;
         this.character = 0;
         this.cursors = 0;
-
     }
 
     preload ()
     {
-        this.load.spritesheet('brawler', 'assets/circle.png', { frameWidth: 48, frameHeight: 48 });
+        this.load.spritesheet('brawler', 'assets/ghosts.png', { frameWidth: 200, frameHeight: 200 });
     }
 
     create ()
@@ -26,14 +22,13 @@ class Example extends Phaser.Scene
             key: 'jump',
             frames: this.anims.generateFrameNumbers('brawler', { frames: [ 0, 1, 2, 3 ] }),
             frameRate: 6,
-            repeat: -1
+            repeat: -1 // repeat forever
         });
 
         const keys = [ 'jump'];
 
-        // const cody = this.add.sprite(150, window.innerHeight-200);
-        this.character = this.add.sprite(150, window.innerHeight-200);
-        this.character.setScale(4);
+        this.character = this.add.sprite(200, window.innerHeight-200);
+        this.character.setScale(1);
         this.character.play('jump');
     }
 
