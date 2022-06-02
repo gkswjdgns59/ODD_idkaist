@@ -23,6 +23,9 @@
   "dependencies": {
     "concurrently": "^7.2.0",
     "express": "^4.18.1",
-    "nodemon": "^2.0.16"
+    "nodemon": "^2.0.16",
+    "phaser": "^3.55.2",
+    "react-animation-on-scroll": "^5.1.0",
+    "react-scroll-motion": "^0.2.6"
   }
 }
