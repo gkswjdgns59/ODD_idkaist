@@ -36,10 +36,16 @@ class Example extends Phaser.Scene
     {
         // Key Pressed
         if (this.cursors.right.isDown) {
-            if (this.character.x < window.innerWidth - 200) this.character.x += 5;
+            if (this.character.x < window.innerWidth - 200) {
+                this.character.x += 5;
+                this.character.scaleX = 1;
+            }
         }
         else if (this.cursors.left.isDown) {
-            if (this.character.x > 150) this.character.x -= 5;
+            if (this.character.x > 150) {
+                this.character.x -= 5;
+                this.character.scaleX = -1;
+            }
         }
     }
 }
