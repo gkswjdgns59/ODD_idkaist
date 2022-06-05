@@ -1,0 +1,22 @@
+/* dummy */
+.frameButton {
+    background-color: aquamarine;
+    width: 10rem;
+    height: 10rem;
+}
+
+.frameContainer {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 5rem;
+}
+
+.pageContainer {
+    width: 64rem;
+    min-height: 36rem;
+    max-height: 48rem;
+    height: max-content;
+}
