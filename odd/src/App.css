@@ -1,7 +1,14 @@
 body {
     margin: 0;
-    /* overflow: hidden; */
+    overflow: hidden;
     -ms-user-select: none; 
     -webkit-user-select: none;
     user-select: none;
+    height: fit-content;
+    width: fit-content;
+    background-color: skyblue;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
