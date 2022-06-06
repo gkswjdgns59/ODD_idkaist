@@ -33,9 +33,9 @@ export default class Ghost extends Phaser.GameObjects.Container {
     createNameTag() {
         const TAG_GAP = 20;
         this.nametag = this.scene.add.text(
-            this.x - (this.sprite.width / 8),
+            this.x - (this.sprite.width / 6),
             this.y - (this.sprite.height / 2 + TAG_GAP),
-            " Sample ", {
+            " Boooo! ", {
                 fontSize: '24px',
                 fontFamily: 'Lato',
                 color: '#ffffff',
@@ -48,6 +48,7 @@ export default class Ghost extends Phaser.GameObjects.Container {
 
     update(cursors) {
         if (cursors.right.isDown) {
+            this.sprite.scaleX = 1;
             this.sprite.play("move", true);
         } else if (cursors.left.isDown) {
             this.sprite.scaleX = -1;

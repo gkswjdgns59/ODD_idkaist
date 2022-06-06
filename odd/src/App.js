@@ -7,8 +7,33 @@ import 'react-notion/src/styles.css';
 import { NotionRenderer } from 'react-notion';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import phaserReact from "phaser3-react";
+
+// const config = {
+//   parent: 'your games parent divs id',
+//   dom: { createContainer: true },
+//   plugins: {
+//     global: [
+//       {
+//         key: 'phaser-react',
+//         plugin: phaserReact,
+//         start: true
+//       }
+//     ]
+//   }
+// }
 
 const config = {
+  dom: { createContainer: true },
+  plugins: {
+        global: [
+          {
+            key: 'phaser-react',
+            plugin: phaserReact,
+            start: true
+          }
+        ]
+      },
   type: Phaser.AUTO,
   parent: 'game',
   scale: {
