@@ -12,3 +12,9 @@ body {
 ::-webkit-scrollbar {
     display: none;
 }
+
+#game {
+    overflow: hidden;
+    height: 100%;
+    margin: 0;
+}
