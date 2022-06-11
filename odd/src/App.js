@@ -1,12 +1,17 @@
 // import components
-import './App.css';
 import Header from './components/Header';
+import Test5 from './components/Test5/Test5';
+import Test6 from './components/Test6/Test6';
+
+
+import './App.css';
 import { SceneHallway } from './components/game-elements/Scenes';
 import Phaser from "phaser";
 import 'react-notion/src/styles.css';
 import { NotionRenderer } from 'react-notion';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+
 
 const config = {
   type: Phaser.AUTO,
@@ -47,6 +52,8 @@ function App() {
       {/* {Object.keys(response).length && (
         <NotionRenderer blockMap={response} fullPage={true} />
       )} */}
+      <Test5/>
+      <Test6/>
       <Header/>
     </div>
   );
