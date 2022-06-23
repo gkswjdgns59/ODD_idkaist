@@ -1,8 +1,8 @@
 // import components
 import Header from './components/Header';
 import Test5 from './components/Test5/Test5';
-import Test6 from './components/Test6/Test6';
 
+import Test6 from './components/Test6/Test6';
 
 import './App.css';
 import { SceneHallway } from './components/game-elements/Scenes';
@@ -37,6 +37,7 @@ const game = new Phaser.Game(config);
 
 function App() {
   const [response, setResponse] = useState({});
+  const [enter, setEnter] = useState(false);
   
   useEffect(() => {
     const NOTION_PAGE_ID = 'be4ddb06be8d423785dcd8a4372d1e05';
@@ -46,17 +47,22 @@ function App() {
         setResponse(data);
       })
   }, []);
-  
   return (
     <div className="App">
       {/* {Object.keys(response).length && (
         <NotionRenderer blockMap={response} fullPage={true} />
       )} */}
-      <Test5/>
+      {/* <Expire delay="100000"><Test5/></Expire> */}
+      {/* <div className="Entrance_container">
+        
+      </div> */}
+      {/* <Test5/> */}
       <Test6/>
       <Header/>
     </div>
   );
 }
+
+
 
 export default App;

@@ -10,28 +10,32 @@ import IMG_right2 from './right2.png';
 import IMG_right3 from './right3.png';
 import IMG_right4 from './right4.png';
 import IMG_hotel from './hotel.png';
+import IMG_pot from './hotel_pot.png';
 import IMG_letter from './letter.png';
 import IMG_button from './button.png';
+import { NONE } from 'phaser';
 
 export default function Test5() {
 
     const [isClick, setIsClick] = useState(false);
     const [show, setShow] = useState(true);
-
+    
     return (
-        <div className={styles.container}>
-            <motion.div
-                className={styles.hotel_box}
-                animate={{
-                    scale: isClick? [1, 1, 3] : 1
-                }}
-                initial={{y: 0, scale: 1}}
-                transition={{
-                    duration: 2.5
-                }}
-            >
-                <img src={IMG_hotel}></img>
-            </motion.div>
+        <motion.div className={styles.container}>
+            <div className={styles.hotel_box}>
+                <motion.img
+                    src={IMG_hotel}
+                    className={styles.hotel_box_img}
+                    animate={{
+                        scale: isClick ? [0.5, 0.5, 1, 1, 1] : 0.5
+                    }}
+                    initial={{scale: 0.5}}
+                    transition={{
+                        duration: 4
+                    }}
+                >    
+                </motion.img>
+            </div>
 
 
             <motion.div
@@ -162,6 +166,6 @@ export default function Test5() {
                 </motion.div>
             }
             
-        </div>
+        </motion.div>
     )
 }
