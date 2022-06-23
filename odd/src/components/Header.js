@@ -11,17 +11,15 @@ export default function Header() {
                 <div className={styles.leftHeader}>
                     <img
                         src="/assets/ODD.png"
-                        height="30rem"
                     />
                 </div>
                 <div className={styles.rightHeader}>
                     <div className={styles.wobble}>
-                        <img src="/assets/icon_ghost.png" height="30rem"/>
+                        <img src="/assets/icon_ghost.png" />
                     </div>
                     <div className={styles.wobble}>
                         <img
-                            src="/assets/icon_menu.png" 
-                            height="25rem"
+                            src="/assets/icon_menu.png"
                             onClick={() => setOpen(!open)}
                         />
                     </div>

@@ -2,6 +2,7 @@
 
 .headerWrapper {
   position: fixed;
+  top: 0;
   width: 100%;
 }
 
@@ -26,7 +27,19 @@
     display: flex;
     align-items: center;
     gap: 1.5rem;
-    margin: 0 3rem;
+    margin-right: 3rem;
+}
+
+.leftHeader img {
+  height: 2rem;
+}
+
+.rightHeader :nth-child(1) img {
+  height: 2rem;
+}
+
+.rightHeader :nth-child(2) img {
+  height: 1.8rem;
 }
 
 .menu {
@@ -54,29 +67,43 @@
     text-shadow: none;
 }
 
-@media screen and (max-width: 768px) {
-    .header {
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-    }
+@media screen and (max-width: 500pt) {
+  .leftHeader img {
+    height: 1.7rem;
+  }
+  
+  .rightHeader :nth-child(1) img {
+    height: 1.7rem;
+  }
+  
+  .rightHeader :nth-child(2) img {
+    height: 1.5rem;
+  }
 
-    .leftHeader {
-        margin-left: 1.5rem;
-    }
-    
-    .rightHeader {
-        gap: 1rem;
-        margin-right: 1rem;
-    }
-    
-    .menu {
-        gap: 0.8rem;
-        padding-bottom: 0.4rem;
-    }
+  .header {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
 
-    .menuText {
-        font-size: 1rem;
-    }
+  .leftHeader {
+      margin-left: 2rem;
+  }
+
+  .rightHeader {
+      gap: 1.5rem;
+      margin-right: 2rem;
+  }
+
+  .menu {
+    top: calc(31px + 2rem);
+    gap: 1rem;
+    padding-bottom: 0.5rem;
+    /* margin-top: 1.5rem; */
+  }
+
+  .menuText {
+      font-size: 1.5rem;
+  }
 }
 
 @-webkit-keyframes wobble {
