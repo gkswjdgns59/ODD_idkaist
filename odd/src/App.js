@@ -1,6 +1,5 @@
 // import components
 import Header from './components/Header';
-import Test5 from './components/Test5/Test5';
 
 import Test6 from './components/Test6/Test6';
 
@@ -54,20 +53,20 @@ function App() {
   const [enter, setEnter] = useState(false);
   const { scrollYProgress } = useViewportScroll();
 
-  const xLeft1 = useTransform(scrollYProgress, [0.2, 1], ["0px", "-4000px"]);
-  const xLeft2 = useTransform(scrollYProgress, [0.35, 1], ["0px", "-4000px"]);
-  const xLeft3 = useTransform(scrollYProgress, [0.5, 1], ["0px", "-4000px"]);
-  const xLeft4 = useTransform(scrollYProgress, [0.65, 1], ["0px", "-4000px"]);
+  const xLeft1 = useTransform(scrollYProgress, [0.15, 1], ["0px", "-4000px"]);
+  const xLeft2 = useTransform(scrollYProgress, [0.3, 1], ["0px", "-4000px"]);
+  const xLeft3 = useTransform(scrollYProgress, [0.45, 1], ["0px", "-4000px"]);
+  const xLeft4 = useTransform(scrollYProgress, [0.6, 1], ["0px", "-4000px"]);
   
-  const xRight1 = useTransform(scrollYProgress, [0.2, 1], ["0px", "4000px"]);
-  const xRight2 = useTransform(scrollYProgress, [0.35, 1], ["0px", "4000px"]);
-  const xRight3 = useTransform(scrollYProgress, [0.5, 1], ["0px", "4000px"]);
-  const xRight4 = useTransform(scrollYProgress, [0.65, 1], ["0px", "4000px"]);
+  const xRight1 = useTransform(scrollYProgress, [0.15, 1], ["0px", "4000px"]);
+  const xRight2 = useTransform(scrollYProgress, [0.3, 1], ["0px", "4000px"]);
+  const xRight3 = useTransform(scrollYProgress, [0.45, 1], ["0px", "4000px"]);
+  const xRight4 = useTransform(scrollYProgress, [0.6, 1], ["0px", "4000px"]);
 
   const scaleHotel = useTransform(scrollYProgress, [0.6, 1], ["0.3","1"]);
 
   const yLetter = useTransform(scrollYProgress, [0.05, 0.35], ["0","-100vh"]);
-  const scaleLetter = useTransform(scrollYProgress, [0, 0.15], ["1","0.7"]);
+  const scaleLetter = useTransform(scrollYProgress, [0, 0.4], ["1","0.7"]);
 
 
   useEffect(() => {
