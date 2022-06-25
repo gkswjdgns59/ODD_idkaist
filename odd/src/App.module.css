@@ -12,6 +12,7 @@
     height: 100vh;
     position: fixed;
     /* background-color: rgb(136, 53, 56); */
+    z-index: 1;
 }
 
 .container {
