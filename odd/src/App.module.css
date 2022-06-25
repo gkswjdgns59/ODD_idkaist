@@ -7,35 +7,11 @@
     font-style: normal;
 }
 
-body {
-    margin: 0;
-    /* overflow: hidden; */
-    -ms-user-select: none; 
-    -webkit-user-select: none;
-    user-select: none;
-    height: 800vh;
-    width: fit-content;
-    background-color: pink;
-}
-
-::-webkit-scrollbar {
-    display: none;
-}
-
-#game {
-    overflow: hidden;
-    height: 100vh;
-    position: absolute;
-    top: 100vh;
-    margin: 0;
-    z-index: -1;
-}
-
 .App {
     width: 100%;
     height: 100vh;
     position: fixed;
-    background-color: rgb(136, 53, 56);
+    /* background-color: rgb(136, 53, 56); */
 }
 
 .container {
@@ -46,6 +22,7 @@ body {
     flex-direction: row;
     /* align-items: flex-end; */
     justify-content: center;
+    background-color: rgb(146, 53, 56);
 }
 
 .container :nth-child(3), :nth-child(5), :nth-child(7), :nth-child(9) {
@@ -64,7 +41,6 @@ body {
     align-items: flex-end;
     justify-content: center;
     position: fixed;
-    background-color: rgb(146, 53, 56);
 }
 
 .box {
@@ -94,7 +70,7 @@ body {
     width: fit-content;
     height: fit-content;
     position: absolute;
-    bottom: 10rem;
+    top: 65rem;
     font-size: 3rem;
     font-family: 'Shrikhand', cursive;
 }
