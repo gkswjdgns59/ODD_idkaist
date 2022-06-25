@@ -3,7 +3,6 @@ import './App.css';
 import Header from './components/Header';
 import { SceneHallway } from './components/game-elements/Scenes';
 import Phaser from "phaser";
-// import Frame from './components/ui-elements/Frame';
 import FrameMgr from './components/ui-elements/FrameMgr';
 
 const config = {
