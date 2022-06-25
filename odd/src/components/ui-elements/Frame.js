@@ -50,7 +50,8 @@ export default function Frame(props) {
     }
 
     return (
-        <>
+        <div className={styles.frame}>
+            <img src="/assets/frame.png" className={styles.frameImage} />
             <div className={styles.frameButton}
                 onClick= {() => {openModal()}}
             >
@@ -77,6 +78,6 @@ export default function Frame(props) {
                     <Page pageNumber={1} width={window.innerWidth / 2}></Page>
                 </Document>
             </StyledModal>
-        </>
+        </div>
     )
 }

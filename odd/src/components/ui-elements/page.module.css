@@ -1,8 +1,11 @@
-/* dummy */
 .frameButton {
+    width: 14.4rem;
+    height: 10.8rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(-50%, -50%);
     background-color: aquamarine;
-    width: 10rem;
-    height: 10rem;
 }
 
 .frameContainer {
@@ -19,4 +22,17 @@
     min-height: 36rem;
     max-height: 48rem;
     height: max-content;
+}
+
+.frameImage {
+    width: 16rem;
+    height: 12rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(-50%, -50%);
+}
+
+.frame {
+    position: relative;
 }

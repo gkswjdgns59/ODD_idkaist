@@ -6,8 +6,8 @@ import React, { useState, useRef, useEffect } from 'react';
 import { motion, useViewportScroll, useTransform } from "framer-motion";
 import { SceneHallway } from './components/game-elements/Scenes';
 import Phaser from "phaser";
+import phaserReact from "phaser3-react";
 import FrameMgr from './components/ui-elements/FrameMgr';
-
 
 import IMG_left1 from './components/images/left1.png';
 import IMG_left2 from './components/images/left2.png';
@@ -24,6 +24,16 @@ import IMG_button from './components/images/button.png';
 
 
 const config = {
+  dom: { createContainer : true },
+  plugins: {
+    global: [
+      {
+        key: 'phaser-react',
+        plugin: phaserReact,
+        start: true
+      }
+    ]
+  },
   type: Phaser.AUTO,
   parent: 'game',
   scale: {
@@ -76,14 +86,13 @@ function App() {
         setEntered(true);
         document.body.style.height = "100vh";
       }
-      console.log(scrollYProgress);
     });
   }, []);
 
 
   return (
     <div className={styles.App}>
-      <FrameMgr/>
+      <FrameMgr />
       {entered ||
         <motion.div
           className={styles.container}

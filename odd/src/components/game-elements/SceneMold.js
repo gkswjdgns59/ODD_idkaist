@@ -1,5 +1,6 @@
 import Phaser from "phaser";
 import Ghost from "./Ghost";
+import socket from "./../../socket-client";
 
 export default class SceneMold extends Phaser.Scene {
     constructor(bg) {
@@ -33,10 +34,24 @@ export default class SceneMold extends Phaser.Scene {
         // create user
         this.user = new Ghost(this, window.innerWidth / 10,
             window.innerHeight / 3, "ghost");
+
+        // create camera
+        this.cameras.main.startFollow(this.user);
+        this.cameras.main.roundPixels = true;
+    }
+
+    test() {
+        console.log('test');
     }
 
     update() {
         this.user.update(this.cursors);
+
+        if (this.cursors.right.isDown) {
+            socket.emit('moveGhost', +8);
+        } else if (this.cursors.left.isDown) {
+            socket.emit('moveGhost', -8);
+        }
     }
 
     createAnimation() {

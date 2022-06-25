@@ -45,6 +45,10 @@ io.on('connection', (socket) => {
         socket.emit('update', userList);
     })
     
+    socket.on('moveGhost', (value) => {
+        socket.emit('moveBackground', -value);
+    })
+
     socket.on('disconnect', () => {
         const curRoom = userList[socket.id].roomNumber.toString();
 
