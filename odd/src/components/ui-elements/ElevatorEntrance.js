@@ -26,7 +26,8 @@ const Backdrop = styled("div")`
     left: 0;
     right: 0;
     background-color: #000;
-    opacity: 0.1;
+    opacity: 0.95;
+
 `;
 
 export default function ElevatorEntrance() {

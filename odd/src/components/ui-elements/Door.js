@@ -4,26 +4,28 @@ import socket from "./../../socket-client";
 
 export default function Door(props) {
     const [doorImg, setDoorImg] = useState(null);
-    // const [profImg, setProfImg] = useState(null);
+    const [profImg, setProfImg] = useState(null);
 
     useEffect(() => {
         setDoorImg(`./assets/door_${props.roomNumber}.png`);
-        // setProfImg(`./images/prof_${props.roomNumber}`);
+        setProfImg(`./assets/prof_${props.roomNumber}.png`);
     }, []);
 
     const enterRoom = () => {
-
         socket.emit('knock', props.roomNumber);
     }
 
     return (
-        <div>
+        <div className={styles.doorFrame}>
             <img
                 src={doorImg}
                 className={styles.doorImg}
                 onClick={() => enterRoom()}
             ></img>
-            {/* <img src={profImg}></img> */}
+            <img
+                src={profImg}
+                className={styles.profImg}
+            ></img>
         </div>
     )
 }
