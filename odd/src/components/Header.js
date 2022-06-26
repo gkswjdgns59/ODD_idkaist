@@ -27,10 +27,10 @@ export default function Header() {
             </div>
             {open &&
                 <div className={styles.menu}>
-                    <a style={{textDecoration: 'none'}} href="https://2022idkaist.notion.site/About-IDKAIST-150043c2ef334ecb8c7cb6b572855f9b" target='_blank' aria-label='IDKAIST'>
+                    <a style={{textDecoration: 'none'}} href="https://2022idkaist.notion.site/IDKAIST-150043c2ef334ecb8c7cb6b572855f9b" target='_blank' aria-label='IDKAIST'>
                         <div className={styles.menuText}>About IDKAIST</div>
                     </a>
-                    <a style={{textDecoration: 'none'}} href="https://2022idkaist.notion.site/About-ODD-2f5cae4cb3d0464a9b029de767292a03" target='_blank' aria-label='ODD'>
+                    <a style={{textDecoration: 'none'}} href="https://2022idkaist.notion.site/ODD-IDKAIST-Student-Exhibition-2b2a3179b83e4a739090bdacce223082" target='_blank' aria-label='ODD'>
                         <div className={styles.menuText}>About ODD</div>
                     </a>
                     {/* {open2 
