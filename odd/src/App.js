@@ -7,7 +7,7 @@ import { motion, useViewportScroll, useTransform } from "framer-motion";
 import { SceneHallway } from './components/game-elements/Scenes';
 import Phaser from "phaser";
 import phaserReact from "phaser3-react";
-import FrameMgr from './components/ui-elements/FrameMgr';
+import Parser from './components/ui-elements/Parser';
 
 import IMG_left1 from './components/images/left1.png';
 import IMG_left2 from './components/images/left2.png';
@@ -92,7 +92,7 @@ function App() {
 
   return (
     <div className={styles.App}>
-      <FrameMgr />
+      <Parser />
       {entered ||
         <motion.div
           className={styles.container}

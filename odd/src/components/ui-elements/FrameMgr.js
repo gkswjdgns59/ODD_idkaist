@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import Frame from "./Frame";
 import socket from "./../../socket-client";
-import styles from './page.module.css';
 
 export default function FrameMgr() {
     const [response, setResponse] = useState({});
