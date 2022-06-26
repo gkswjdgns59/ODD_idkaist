@@ -48,12 +48,14 @@ export default class Ghost extends Phaser.GameObjects.Container {
 
     update(cursors) {
         if (cursors.right.isDown) {
+            this.sprite.scaleX = 1;
+            this.x += 8;
             this.sprite.play("move", true);
         } else if (cursors.left.isDown) {
+            this.x -= 8;
             this.sprite.scaleX = -1;
             this.sprite.play("move", true);
         } else {
-            this.sprite.scaleX = 1;
             this.sprite.play("idle", true);
         }
     }
