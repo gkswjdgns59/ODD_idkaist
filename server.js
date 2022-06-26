@@ -21,7 +21,7 @@ io.on('connection', (socket) => {
     console.log(`Welcome, ${socket.id}`);
 
     //add user on database
-    const DEFAULT_ROOM = 200; //1F counter
+    const DEFAULT_ROOM = 100; //1F counter
 
     userList[socket.id] = {
         "socketID" : socket.id,
@@ -33,18 +33,18 @@ io.on('connection', (socket) => {
     socket.to(DEFAULT_ROOM.toString()).emit('update', userList);
     socket.emit('update', userList);
 
-    socket.on('move', (roomNumber) => {
+    socket.on('knock', (roomNumber) => {
         const prevRoom = userList[socket.id].roomNumber.toString();
-        const newRoom = roomNumber.toString();
+        const newRoom = roomNumber;
 
         userList[socket.id].roomNumber = roomNumber;
 
         socket.to(prevRoom).to(newRoom).emit('update', userList);
         socket.leave(prevRoom);
         socket.join(newRoom);
-        socket.emit('update', userList);
+        socket.emit('whereUare', userList[socket.id].roomNumber);
     })
-    
+
     socket.on('whereIam', () => {
         socket.emit('whereUare', userList[socket.id].roomNumber);
     })

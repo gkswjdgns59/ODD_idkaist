@@ -22,6 +22,7 @@ export default class Ghost extends Phaser.GameObjects.Container {
         this.scene.add.existing(this);
         this.scene.physics.world.enable(this);
         this.createSprite();
+        this.sprite.scale = 0.8;
         this.createNameTag();
     }
 
@@ -48,12 +49,12 @@ export default class Ghost extends Phaser.GameObjects.Container {
 
     update(cursors) {
         if (cursors.right.isDown) {
-            this.sprite.scaleX = 1;
+            this.sprite.scaleX = 0.8;
             this.x += 8;
             this.sprite.play("move", true);
         } else if (cursors.left.isDown) {
             this.x -= 8;
-            this.sprite.scaleX = -1;
+            this.sprite.scaleX = -0.8;
             this.sprite.play("move", true);
         } else {
             this.sprite.play("idle", true);

@@ -17,7 +17,7 @@
     gap: 2rem;
     overflow: hidden;
 
-    z-index: -5;
+    cursor: pointer;
 }
 
 .frameContainer {
@@ -61,6 +61,16 @@
 }
 
 .doorImg {
-    width : 16rem;
-    height: 20rem;
+    width : 32vh;
+    height: 40vh;
+}
+
+.entrance {
+    width: 36vh;
+    height: 40vh;
+}
+
+.lobby {
+    width: 48vh;
+    height: 40vh;
 }

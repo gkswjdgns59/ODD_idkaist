@@ -65,8 +65,7 @@ export default function Frame(props) {
                     onHide = {() => setOpenPage(false)}
                     renderBackdrop = {renderBackdrop}
                 >
-                    {/* <PageNotion ID={props.ID} /> */}
-                    <Elevator ID={props.ID}/>
+                    <PageNotion ID={props.ID} />
                 </StyledModal>
             
             {/* pdf의 경우 'react-pdf'를 사용하되, CORS 보안 우회를 위해 self-hosting한 서버를 거쳐 fetch함 */}

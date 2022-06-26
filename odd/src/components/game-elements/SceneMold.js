@@ -33,7 +33,7 @@ export default class SceneMold extends Phaser.Scene {
 
         // create user
         this.user = new Ghost(this, window.innerWidth / 10,
-            window.innerHeight / 3, "ghost");
+            window.innerHeight / 2.7, "ghost");
 
         // create camera
         this.cameras.main.startFollow(this.user);

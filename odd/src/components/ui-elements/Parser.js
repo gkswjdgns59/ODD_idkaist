@@ -14,7 +14,7 @@ export default function Parser() {
                 setIsRoom(true);
             }
         })
-    }, []);
+    }, [isRoom]);
 
     return(
         <>
