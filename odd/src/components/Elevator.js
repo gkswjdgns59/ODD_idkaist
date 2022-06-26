@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import { motion } from "framer-motion";
 import styles from './ui.module.css';
-import IMG_elevator from './images/elevator.png'
+// import IMG_elevator from './images/elevator.png'
 import socket from '../socket-client';
 
 export default function Elevator(props) {
@@ -18,7 +18,7 @@ export default function Elevator(props) {
 
     return (
         <motion.div className={styles.elevator_container}>
-            <img src={IMG_elevator}></img>
+            <img src={'./assets/elevator.png'}></img>
             <div className={styles.floor}>
                 <li
                     onClick = {() => onClose('400')}

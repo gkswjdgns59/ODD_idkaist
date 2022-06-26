@@ -22,7 +22,7 @@ const StyledModal = styled(Modal)`
     transform: translate(-50%, -50%);
     border-radius: 5px;
     outline: none;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 1);
     box-shadow: 0px 4px 10px rgba(71, 71, 71, 0.25);
 `;
 

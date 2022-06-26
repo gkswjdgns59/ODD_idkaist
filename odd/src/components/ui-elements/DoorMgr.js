@@ -56,10 +56,10 @@ export default function DoorMgr() {
     return (
         <div style={{
             position : 'absolute',
-            top : '19vh',
+            top : '18vh',
             left : pos,
             display: 'flex',
-            gap: '28rem'
+            gap: '24rem'
         }}>
             {buildDoors(floorNumber)}
         </div>    

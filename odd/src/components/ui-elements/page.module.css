@@ -61,14 +61,14 @@
 }
 
 .doorImg {
-    width : 48vh;
+    width : 60vh;
     height: 60vh;
 }
 
 .profImg {
-    width: 18vh;
-    height: 14vh;
-    margin: 15vh 0 0 -5vh;
+    width: 27vh;
+    height: 21vh;
+    margin: 15vh 0 0 -10vh;
 }
 
 .doorFrame {
