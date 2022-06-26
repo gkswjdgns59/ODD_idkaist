@@ -21,7 +21,7 @@ io.on('connection', (socket) => {
     console.log(`Welcome, ${socket.id}`);
 
     //add user on database
-    const DEFAULT_ROOM = 100; //1F counter
+    const DEFAULT_ROOM = 200; //1F counter
 
     userList[socket.id] = {
         "socketID" : socket.id,
@@ -45,6 +45,14 @@ io.on('connection', (socket) => {
         socket.emit('update', userList);
     })
     
+    socket.on('whereIam', () => {
+        socket.emit('whereUare', userList[socket.id].roomNumber);
+    })
+
+    socket.on('moveGhost', (value) => {
+        socket.emit('moveBackground', -value);
+    })
+
     socket.on('disconnect', () => {
         const curRoom = userList[socket.id].roomNumber.toString();
 
