@@ -4,6 +4,7 @@ import Frame from "./Frame";
 import socket from "./../../socket-client";
 import GoBack from "./GoBack";
 
+
 export default function FrameMgr() {
     const [response, setResponse] = useState({});
     const [roomNumber, setRoomNumber] = useState('000');
@@ -25,6 +26,13 @@ export default function FrameMgr() {
     }, []);
 
     useEffect(() => {
+        socket.on('whereUare', (num) => {
+            console.log(num);
+            setRoomNumber(num.toString());
+        })
+    }, [roomNumber])
+
+    useEffect(() => {
         socket.on('moveBackground', (value) => {
             setPos(pos + value);
         })
@@ -32,8 +40,6 @@ export default function FrameMgr() {
 
     const buildFrames = (data) => {
         let product = [];
-
-
         for (let i = 0; i < data.length; i++) {
             let isPDF = false;
             let id;
