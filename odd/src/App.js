@@ -191,19 +191,6 @@ function App() {
               scale: scaleLetter
             }}
           >
-            <motion.div
-              className={styles.button}
-              // onClick={() => {
-                //   setIsClick(!isClick)
-              // }}
-              whileHover={{scale: 1.1}}
-              whileTap={{scale: 0.9}}
-              transition={{
-                duration: 0.3
-              }}
-            >
-                SCROLL
-            </motion.div>
             <img src={IMG_letter}></img>
           </motion.div>
 
