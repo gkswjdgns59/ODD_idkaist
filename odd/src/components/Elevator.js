@@ -33,7 +33,7 @@ export default function Elevator(props) {
                     onClick = {() => onClose('100')}
                 >1 - LOBBY</li>            
             </div>
-        </motion.div>
+        </div>
     )
 
 }
