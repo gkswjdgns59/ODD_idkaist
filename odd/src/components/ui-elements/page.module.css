@@ -61,16 +61,42 @@
 }
 
 .doorImg {
-    width : 32vh;
-    height: 40vh;
+    width : 48vh;
+    height: 60vh;
+}
+
+.profImg {
+    width: 18vh;
+    height: 14vh;
+    margin: 15vh 0 0 -5vh;
+}
+
+.doorFrame {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .entrance {
     width: 36vh;
     height: 40vh;
+    margin-top: 10vh;
 }
 
 .lobby {
     width: 48vh;
     height: 40vh;
+    margin-top: 10vh;
+}
+
+.buttonContainer {
+    position: fixed;
+    bottom: 5vh;
+    left: 3vh;
+}
+
+.buttonImg {
+    width: 8vh;
+    height: 8vh;
+    cursor: pointer;
 }
