@@ -22,7 +22,7 @@ export default function FrameMgr() {
         for (let i = 0; i < data.length; i++) {
             let isPDF = false;
             let id;
-            if (data[i].Course == "ID000 Example") {
+            if (data[i].Course === "ID000 Example") {
                 if (data[i].PDF != null) {
                     isPDF = true;
                     id = data[i].PDF[0].url;

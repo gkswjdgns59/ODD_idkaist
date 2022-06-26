@@ -7,6 +7,7 @@ import { motion, useViewportScroll, useTransform } from "framer-motion";
 import { SceneHallway } from './components/game-elements/Scenes';
 import Phaser from "phaser";
 import FrameMgr from './components/ui-elements/FrameMgr';
+import Elevator from './components/Elevator';
 
 
 import IMG_left1 from './components/images/left1.png';
@@ -21,6 +22,7 @@ import IMG_hotel from './components/images/hotel.png';
 import IMG_pot from './components/images/hotel_pot.png';
 import IMG_letter from './components/images/letter.png';
 import IMG_button from './components/images/button.png';
+import IMG_elevator from './components/images/elevator.png';
 
 
 const config = {
@@ -63,7 +65,7 @@ function App() {
   const xRight3 = useTransform(scrollYProgress, [0.25, 0.7], ["0px", "4000px"]);
   const xRight4 = useTransform(scrollYProgress, [0.35, 0.7], ["0px", "4000px"]);
 
-  const scaleHotel = useTransform(scrollYProgress, [0.35, 0.7], ["0.3","1"]);
+  const scaleHotel = useTransform(scrollYProgress, [0.35, 0.7], ["1","3"]);
 
   const yLetter = useTransform(scrollYProgress, [0.1, 0.55], ["0","-100vh"]);
   const scaleLetter = useTransform(scrollYProgress, [0.1, 0.45], ["1","0.5"]);
@@ -97,7 +99,7 @@ function App() {
               scale: scaleHotel
             }}
           >
-            <img src={IMG_hotel}></img>
+            <img src={IMG_hotel} className={styles.hotel_img}></img>
           </motion.div>
 
 

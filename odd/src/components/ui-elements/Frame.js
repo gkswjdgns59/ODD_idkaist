@@ -3,6 +3,7 @@ import Modal from 'react-overlays/Modal';
 import styled from 'styled-components';
 import styles from './page.module.css';
 import PageNotion from "./PageNotion";
+import Elevator from "../Elevator";
 
 // import pdfjs
 import { Document, Page } from 'react-pdf';
@@ -21,7 +22,7 @@ const StyledModal = styled(Modal)`
     transform: translate(-50%, -50%);
     border-radius: 5px;
     outline: none;
-    background-color: #FBFBFB;
+    background-color: rgba(255, 255, 255, 0.6);
     box-shadow: 0px 4px 10px rgba(71, 71, 71, 0.25);
 `;
 
@@ -62,7 +63,8 @@ export default function Frame(props) {
                     onHide = {() => setOpenPage(false)}
                     renderBackdrop = {renderBackdrop}
                 >
-                    <PageNotion ID={props.ID} />
+                    {/* <PageNotion ID={props.ID} /> */}
+                    <Elevator ID={props.ID}/>
                 </StyledModal>
             
             {/* pdf의 경우 'react-pdf'를 사용하되, CORS 보안 우회를 위해 self-hosting한 서버를 거쳐 fetch함 */}
