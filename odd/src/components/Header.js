@@ -3,7 +3,7 @@ import styles from "./ui.module.css";
 
 export default function Header() {
     const [open, setOpen] = useState(false);
-    const [open2, setOpen2] = useState(false);
+    // const [open2, setOpen2] = useState(false);
     
     return (
         <div className={styles.headerWrapper}>
@@ -27,8 +27,13 @@ export default function Header() {
             </div>
             {open &&
                 <div className={styles.menu}>
-                    <div className={styles.menuText}>About us</div>
-                    {open2 
+                    <a style={{textDecoration: 'none'}} href="https://2022idkaist.notion.site/About-IDKAIST-150043c2ef334ecb8c7cb6b572855f9b" target='_blank' aria-label='IDKAIST'>
+                        <div className={styles.menuText}>About IDKAIST</div>
+                    </a>
+                    <a style={{textDecoration: 'none'}} href="https://2022idkaist.notion.site/About-ODD-2f5cae4cb3d0464a9b029de767292a03" target='_blank' aria-label='ODD'>
+                        <div className={styles.menuText}>About ODD</div>
+                    </a>
+                    {/* {open2 
                     ? <div className={styles.menuText} onClick={() => setOpen2(!open2)}>
                         Language: Korean
                     </div>
@@ -36,7 +41,7 @@ export default function Header() {
                         Language: English
                     </div>
                     }
-                    <div className={styles.menuText}>Setting</div>
+                    <div className={styles.menuText}>Setting</div> */}
                 </div>
             }
         </div>
