@@ -9,7 +9,8 @@
     "front": "cd odd && npm start",
     "dev": "concurrently \"npm run server\" \"npm run front\"",
     "update": "npm install && cd odd && npm install",
-    "start": "node server.js"
+    "start": "node server.js",
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "repository": {
     "type": "git",

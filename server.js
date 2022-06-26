@@ -8,6 +8,14 @@ app.use(express.static('public'));
 const server = http.createServer(app);
 const PORT = 4000;
 
+if (process.env.NODE_ENV === "production") {
+    app.use(express.static("odd/build"));
+  }
+  
+  app.get("/", (request, response) => {
+    response.sendFile(path.join(__dirname, "odd/build", "index.html"));
+  });
+
 let { userList } = require("./database");
 
 const io = Io(server, {
