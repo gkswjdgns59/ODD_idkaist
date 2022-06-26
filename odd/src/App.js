@@ -19,7 +19,7 @@ import IMG_right1 from './components/images/right1.png';
 import IMG_right2 from './components/images/right2.png';
 import IMG_right3 from './components/images/right3.png';
 import IMG_right4 from './components/images/right4.png';
-import IMG_hotel from './components/images/hotel.png';
+import IMG_hotel from './components/images/hotel.jpg';
 import IMG_pot from './components/images/hotel_pot.png';
 import IMG_letter from './components/images/letter.png';
 import IMG_button from './components/images/button.png';

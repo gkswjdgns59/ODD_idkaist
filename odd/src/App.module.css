@@ -77,13 +77,13 @@
     font-family: 'Shrikhand', cursive;
 }
 
-@media (aspect-ratio >= 1/1) {
+@media (aspect-ratio >= 6121/5383) {
     .hotel_box img {
         height: unset;
         width: 100%;
     }
 }
-@media (aspect-ratio <= 1/1) {
+@media (aspect-ratio <= 6121/5383) {
     .hotel_box img {
         height: 100%;
         width: unset;
