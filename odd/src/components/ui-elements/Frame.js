@@ -50,11 +50,13 @@ export default function Frame(props) {
     }
 
     return (
-        <>
+        <div className={styles.frame}>
+            <img src="/assets/frame.png" className={styles.frameImage} />
             <div className={styles.frameButton}
                 onClick= {() => {openModal()}}
             >
-                button
+                <div className={styles.title}>{props.Title}</div>
+                <div className={styles.student}>{props.Student}</div>
             </div>
             {/* notion page의 경우 'react-notion'을 통해 render */}
                 <StyledModal
@@ -77,6 +79,6 @@ export default function Frame(props) {
                     <Page pageNumber={1} width={window.innerWidth / 2}></Page>
                 </Document>
             </StyledModal>
-        </>
+        </div>
     )
 }
