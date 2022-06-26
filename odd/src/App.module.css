@@ -89,3 +89,10 @@
         width: unset;
     }
 }
+
+@media (max-width: 425pt) {
+    .letter_box {
+        height: 60vh;
+        top: 20vh;
+    }
+}
