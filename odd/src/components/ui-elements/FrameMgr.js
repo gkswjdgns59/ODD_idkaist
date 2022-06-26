@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import Frame from "./Frame";
 import socket from "./../../socket-client";
+import Door from "./Door";
 
 export default function FrameMgr() {
     const [response, setResponse] = useState({});
@@ -10,10 +11,6 @@ export default function FrameMgr() {
 
     useEffect(() => {
         socket.emit('whereIam');
-        socket.on('whereUare', (num) => {
-            setRoomNumber(num);
-        })
-
         const NOTION_DATABASE_ID = 'IDKAIST-Courses-b56f3727db2743f89b89193ef60a9734';
 
         axios
@@ -24,6 +21,13 @@ export default function FrameMgr() {
     }, []);
 
     useEffect(() => {
+        socket.on('whereUare', (num) => {
+            console.log(num);
+            setRoomNumber(num.toString());
+        })
+    }, [roomNumber])
+
+    useEffect(() => {
         socket.on('moveBackground', (value) => {
             setPos(pos + value);
         })
@@ -31,6 +35,13 @@ export default function FrameMgr() {
   
     const buildFrames = (data) => {
         let product = [];
+
+        product.push(
+            <Door
+                key = {'Door 1'}
+                roomNumber = {roomNumber}
+            ></Door>
+        )
         for (let i = 0; i < data.length; i++) {
             let isPDF = false;
             let id;
@@ -61,6 +72,13 @@ export default function FrameMgr() {
                 )            
             }
         }
+        product.push(
+            <Door
+                key = {'Door 2'}
+                roomNumber = {roomNumber}
+            ></Door>
+        )
+
         return product;
     }
 

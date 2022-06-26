@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Door from './Door';
 import socket from "./../../socket-client";
+import ElevatorEntrance from './ElevatorEntrance';
+import Lobby from './Lobby';
 
 export default function DoorMgr() {
     const [floorNumber, setFloorNumber] = useState('200');
@@ -21,25 +23,43 @@ export default function DoorMgr() {
 
     const buildDoors = (floor) => {
         let product = [];
-        for (let i in DoorDb[floor]) {
+        product.push(
+            <ElevatorEntrance
+                key = {'Entrance 1'}
+            />
+        )
+
+        if (floor.toString() === '100') {
             product.push(
-                <Door
-                    key = {`Door ${i}`}
-                    roomNumber = {i.toString()}
+                <Lobby
+                    key = {'Lobby'}
                 />
             )
+        } else {
+            for (let i in DoorDb[floor]) {
+                product.push(
+                    <Door
+                        key = {`Door ${i}`}
+                        roomNumber = {i.toString()}
+                    />
+                )
+            }
         }
-
+        product.push(
+            <ElevatorEntrance
+                key = {'Entrance 2'}
+            />
+        )
         return product;
     }
 
     return (
         <div style={{
             position : 'absolute',
-            top : 350,
+            top : '29vh',
             left : pos,
             display: 'flex',
-            gap: '40rem'
+            gap: '30rem'
         }}>
             {buildDoors(floorNumber)}
         </div>    

@@ -80,6 +80,11 @@
   text-align: center;
 }
 
+.floor li:hover {
+  background-color: #22222255;
+  color: #FFFFFF;
+}
+
 /* .elevator_container {
   width: 100vw;
   height: 100vh;
