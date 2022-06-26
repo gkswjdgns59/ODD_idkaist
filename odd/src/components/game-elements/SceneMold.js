@@ -9,7 +9,7 @@ export default class SceneMold extends Phaser.Scene {
     }
 
     preload() {
-        this.load.image("bg", "assets/bg.png");
+        this.load.image("bg", "assets/bg_2.png");
         this.load.spritesheet("ghost", "assets/ghosts.png", {
             frameWidth : 200,
             frameHeight : 200
@@ -17,7 +17,7 @@ export default class SceneMold extends Phaser.Scene {
     }
 
     create() {
-        const BG_HEIGHT = 2223;
+        const BG_HEIGHT = 3072;
 
         this.cursors = this.input.keyboard.createCursorKeys();
 
@@ -44,9 +44,9 @@ export default class SceneMold extends Phaser.Scene {
         this.user.update(this.cursors);
 
         if (this.cursors.right.isDown) {
-            socket.emit('moveGhost', +8);
+            socket.emit('moveGhost', +12);
         } else if (this.cursors.left.isDown) {
-            socket.emit('moveGhost', -8);
+            socket.emit('moveGhost', -12);
         }
     }
 

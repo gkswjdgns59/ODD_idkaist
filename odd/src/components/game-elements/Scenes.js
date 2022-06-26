@@ -6,10 +6,4 @@ class SceneHallway extends SceneMold {
     }
 }
 
-class SceneRoom extends SceneMold {
-    constructor() {
-        super("bg");
-    }
-}
-
-export { SceneHallway, SceneRoom };
+export { SceneHallway };

@@ -27,7 +27,6 @@ export default function FrameMgr() {
 
     useEffect(() => {
         socket.on('whereUare', (num) => {
-            console.log(num);
             setRoomNumber(num.toString());
         })
     }, [roomNumber])
@@ -50,12 +49,12 @@ export default function FrameMgr() {
                 if (data[i].Tag === 'PDF') {
                     isPDF = true;
                     id = data[i].PDF[0].url;
-                    title = data[i].Title;
+                    title = data[i].Project;
                     student = data[i]['Student number & Name'];
                 } else {
                     isPDF = false;
                     id = data[i].id;
-                    title = data[i].Title;
+                    title = data[i].Project;
                     student = data[i]['Student number & Name'];
                 }
     
@@ -80,7 +79,7 @@ export default function FrameMgr() {
                 top : 350,
                 left : pos,
                 display: 'flex',
-                gap: '40rem'
+                gap: '20rem'
             }}>
                 {buildFrames(response)}
             </div>
