@@ -79,7 +79,21 @@ export default function Frame(props) {
                 >
                     <Page pageNumber={1} width={window.innerWidth / 2}></Page>
                 </Document>
-            </StyledModal>
+            </StyledModal>    
+            <button style={{
+                position: 'fixed',
+                top: 'calc(3rem + 40px)',
+                left: '2.5rem',
+                display: 'flex',
+                fontFamily: '0.7rem',
+                fontSize: '',
+                textAlign: 'center',
+                padding: '',
+                borderRadius: '',
+                border: ''
+            }}>
+                room num.
+            </button>
         </div>
     )
 }
