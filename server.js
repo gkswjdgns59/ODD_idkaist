@@ -21,7 +21,7 @@ io.on('connection', (socket) => {
     console.log(`Welcome, ${socket.id}`);
 
     //add user on database
-    const DEFAULT_ROOM = 211; //1F counter
+    const DEFAULT_ROOM = 200; //1F counter
 
     userList[socket.id] = {
         "socketID" : socket.id,
