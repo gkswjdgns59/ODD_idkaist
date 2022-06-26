@@ -39,11 +39,7 @@ export default class SceneMold extends Phaser.Scene {
         this.cameras.main.startFollow(this.user);
         this.cameras.main.roundPixels = true;
     }
-
-    test() {
-        console.log('test');
-    }
-
+    
     update() {
         this.user.update(this.cursors);
 

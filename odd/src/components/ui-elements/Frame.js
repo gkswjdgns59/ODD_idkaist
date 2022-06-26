@@ -55,7 +55,8 @@ export default function Frame(props) {
             <div className={styles.frameButton}
                 onClick= {() => {openModal()}}
             >
-                button
+                <div className={styles.title}>{props.Title}</div>
+                <div className={styles.student}>{props.Student}</div>
             </div>
             {/* notion page의 경우 'react-notion'을 통해 render */}
                 <StyledModal

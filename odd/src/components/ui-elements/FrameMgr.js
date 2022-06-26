@@ -10,7 +10,10 @@ export default function FrameMgr() {
     const [pos, setPos] = useState(0);
 
     useEffect(() => {
-        setRoomNumber('000'); // get from server
+        socket.emit('whereIam');
+        socket.on('whereUare', (num) => {
+            setRoomNumber(num);
+        })
 
         const NOTION_DATABASE_ID = 'IDKAIST-Courses-b56f3727db2743f89b89193ef60a9734';
 
@@ -29,17 +32,23 @@ export default function FrameMgr() {
   
     const buildFrames = (data) => {
         let product = [];
-
         for (let i = 0; i < data.length; i++) {
             let isPDF = false;
             let id;
+            let title;
+            let student;
+
             if (data[i].Course.includes(`ID${roomNumber}`)) {
                 if (data[i].PDF != null) {
                     isPDF = true;
                     id = data[i].PDF[0].url;
+                    title = data[i].Title;
+                    student = data[i]['Student number & Name'];
                 } else {
                     isPDF = false;
                     id = data[i].id;
+                    title = data[i].Title;
+                    student = data[i]['Student number & Name'];
                 }
     
                 product.push(
@@ -47,6 +56,8 @@ export default function FrameMgr() {
                         key = {`Frame ${i}`}
                         PDF = {isPDF}
                         ID = {id}
+                        Title = {title}
+                        Student = {student}
                     />
                 )            
             }
