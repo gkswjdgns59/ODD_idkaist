@@ -1,4 +1,5 @@
 import Phaser from "phaser";
+import socket from './../../socket-client'
 
 class GhostSprite extends Phaser.Physics.Arcade.Sprite {
     constructor(scene, x, y, spritesheet) {
@@ -24,6 +25,10 @@ export default class Ghost extends Phaser.GameObjects.Container {
         this.createSprite();
         this.sprite.scale = 0.8;
         this.createNameTag();
+
+        socket.on('warpGhost', () => {
+            this.x = window.innerWidth / 10;
+        })
     }
 
     createSprite() {

@@ -53,6 +53,10 @@ io.on('connection', (socket) => {
         socket.emit('moveBackground', -value);
     })
 
+    socket.on('warpRequest', () => {
+        socket.emit('warpGhost');
+    })
+
     socket.on('disconnect', () => {
         const curRoom = userList[socket.id].roomNumber.toString();
 
