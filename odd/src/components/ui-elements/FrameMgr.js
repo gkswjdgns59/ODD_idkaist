@@ -3,7 +3,7 @@ import axios from 'axios';
 import Frame from "./Frame";
 import socket from "./../../socket-client";
 import GoBack from "./GoBack";
-
+import Sign from "./Sign";
 
 export default function FrameMgr() {
     const [response, setResponse] = useState({});
@@ -84,6 +84,7 @@ export default function FrameMgr() {
                 {buildFrames(response)}
             </div>
             <GoBack cur={roomNumber} />
+            <Sign cur={roomNumber} size={'Large'}/>
         </>
     )
 }
