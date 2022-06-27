@@ -118,3 +118,23 @@
 
     height: 10vh;
 }
+
+.talk {
+    position: fixed;
+    top: 30vh;
+    margin-left: 100vh;
+    left: auto;
+
+    padding: 2vh;
+    border-radius: 1vh;    
+
+    background-color: #FCFCFC;
+    color: #222222;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.talk:hover {
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+}

@@ -2,12 +2,10 @@
 import './App.css';
 import styles from './App.module.css';
 import Header from './components/Header';
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, useViewportScroll, useTransform } from "framer-motion";
 import { SceneHallway } from './components/game-elements/Scenes';
 import Phaser from "phaser";
-import FrameMgr from './components/ui-elements/FrameMgr';
-import Elevator from './components/Elevator';
 import phaserReact from "phaser3-react";
 import Parser from './components/ui-elements/Parser';
 
@@ -19,11 +17,8 @@ import IMG_right1 from './components/images/right1.png';
 import IMG_right2 from './components/images/right2.png';
 import IMG_right3 from './components/images/right3.png';
 import IMG_right4 from './components/images/right4.png';
-import IMG_hotel from './components/images/hotel.jpg';
-import IMG_pot from './components/images/hotel_pot.png';
+import IMG_hotel from './components/images/hotel.png';
 import IMG_letter from './components/images/letter.png';
-import IMG_button from './components/images/button.png';
-import IMG_elevator from './components/images/elevator.png';
 
 
 const config = {
