@@ -3,6 +3,7 @@ import Door from './Door';
 import socket from "./../../socket-client";
 import ElevatorEntrance from './ElevatorEntrance';
 import Lobby from './Lobby';
+import Sign from './Sign';
 
 export default function DoorMgr() {
     const [floorNumber, setFloorNumber] = useState('200');
@@ -54,15 +55,18 @@ export default function DoorMgr() {
     }
 
     return (
-        <div style={{
-            position : 'absolute',
-            top : '18vh',
-            left : pos,
-            display: 'flex',
-            gap: '24rem'
-        }}>
-            {buildDoors(floorNumber)}
-        </div>    
+        <>
+            <div style={{
+                position : 'absolute',
+                top : '18vh',
+                left : pos,
+                display: 'flex',
+                gap: '24rem'
+            }}>
+                {buildDoors(floorNumber)}
+            </div>    
+            <Sign size={'Small'} cur={floorNumber}/>
+        </>
     )
 }
 
@@ -109,6 +113,10 @@ const DoorDb = {
         311 : {
             roomNumber : 311,
             title : 'Software Prototyping'
+        },
+        314 : {
+            roomNumber : 314,
+            title : 'Moving Image Design'
         },
     },
     400 : {
