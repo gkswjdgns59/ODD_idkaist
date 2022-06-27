@@ -15,9 +15,6 @@ export default function Header() {
                 </div>
                 <div className={styles.rightHeader}>
                     <div className={styles.wobble}>
-                        <img src="/assets/icon_ghost.png" />
-                    </div>
-                    <div className={styles.wobble}>
                         <img
                             src="/assets/icon_menu.png"
                             onClick={() => setOpen(!open)}
