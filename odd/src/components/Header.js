@@ -11,12 +11,15 @@ export default function Header() {
                 <div className={styles.leftHeader}>
                     <img
                         src="/assets/ODD.png"
+                        onClick={() => window.location.reload()}
                     />
                 </div>
                 <div className={styles.rightHeader}>
-                    <div className={styles.wobble}>
-                        <img src="/assets/icon_ghost.png" />
-                    </div>
+                    {/* <div className={styles.wobble}>
+                        <img
+                            src="/assets/icon_ghost.png"
+                        />
+                    </div> */}
                     <div className={styles.wobble}>
                         <img
                             src="/assets/icon_menu.png"
@@ -33,15 +36,6 @@ export default function Header() {
                     <a style={{textDecoration: 'none'}} href="https://2022idkaist.notion.site/ODD-IDKAIST-Student-Exhibition-2b2a3179b83e4a739090bdacce223082" target='_blank' aria-label='ODD'>
                         <div className={styles.menuText}>About ODD</div>
                     </a>
-                    {/* {open2 
-                    ? <div className={styles.menuText} onClick={() => setOpen2(!open2)}>
-                        Language: Korean
-                    </div>
-                    : <div className={styles.menuText} onClick={() => setOpen2(!open2)}>
-                        Language: English
-                    </div>
-                    }
-                    <div className={styles.menuText}>Setting</div> */}
                 </div>
             }
         </div>

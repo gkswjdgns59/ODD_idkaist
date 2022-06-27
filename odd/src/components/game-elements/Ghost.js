@@ -24,7 +24,7 @@ export default class Ghost extends Phaser.GameObjects.Container {
         this.scene.physics.world.enable(this);
         this.createSprite();
         this.sprite.scale = 0.8;
-        this.createNameTag();
+        // this.createNameTag();
 
         socket.on('warpGhost', () => {
             this.x = window.innerWidth / 10;
@@ -36,21 +36,21 @@ export default class Ghost extends Phaser.GameObjects.Container {
         this.add(this.sprite);
     }
 
-    createNameTag() {
-        const TAG_GAP = 20;
-        this.nametag = this.scene.add.text(
-            this.x - (this.sprite.width / 8),
-            this.y - (this.sprite.height / 2 + TAG_GAP),
-            " Sample ", {
-                fontSize: '24px',
-                fontFamily: 'Lato',
-                color: '#ffffff',
-                backgroundColor: "#222222",
-                align: 'center'
-            });
-        this.nametag.setOrigin(0, 0);
-        this.add(this.nametag);
-    }
+    // createNameTag() {
+    //     const TAG_GAP = 20;
+    //     this.nametag = this.scene.add.text(
+    //         this.x - (this.sprite.width / 8),
+    //         this.y - (this.sprite.height / 2 + TAG_GAP),
+    //         " Sample ", {
+    //             fontSize: '24px',
+    //             fontFamily: 'Lato',
+    //             color: '#ffffff',
+    //             backgroundColor: "#222222",
+    //             align: 'center'
+    //         });
+    //     this.nametag.setOrigin(0, 0);
+    //     this.add(this.nametag);
+    // }
 
     update(cursors) {
         if (cursors.right.isDown) {
