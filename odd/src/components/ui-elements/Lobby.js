@@ -3,7 +3,7 @@ import styles from './page.module.css';
 
 export default function Lobby() {
     // 구글 폼 링크
-    const FORM_LINK = 'https://docs.google.com/forms/d/e/1FAIpQLScqsE4Z4DT6gcTuWSJHYliTvXozDz5gsBlKQfYHfMhe9i6JkA/viewform?vc=0&c=0&w=1&flr=0';
+    const FORM_LINK = 'https://docs.google.com/forms/d/e/1FAIpQLSeBnc9ykEEPuXIOIUqeJBRA7LytWbDky97i1bQOWGDTHpj1XQ/viewform?vc=0&c=0&w=1&flr=0'
 
     const [active, setActive] = useState(false);
 
