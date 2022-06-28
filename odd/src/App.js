@@ -193,6 +193,13 @@ function App() {
         </motion.div>
       }
       <Header/>
+      <div className={styles.help}>
+        <img
+          src={'./assets/arrow.png'}
+          className={styles.arrow}
+        />
+        <div>좌우 방향키로 유령을 움직여 ODD 호텔을 구경하세요.</div>
+      </div>
     </div>
   );
 }

@@ -75,18 +75,25 @@ export default function Door(props) {
                 className={styles.doorImg}
                 onClick={() => enterRoom()}
             ></img>
-            <img
-                src={profImg}
-                className={styles.profImg}
-                onClick={() => setOpen(true)}
-            ></img>
+            <div className={styles.profFrame}>
+                <img
+                    src={profImg}
+                    className={styles.profImg}
+                    onClick={() => setOpen(true)}
+                ></img>
+                <img
+                    src={'./assets/help.png'}
+                    className={styles.help}
+                >
+                </img>
+            </div>
             <StyledModal
-                show = {open}
-                onHide = {() => setOpen(false)}
-                renderBackdrop = {renderBackdrop}
-            >
-                <PageNotion ID={getID(response)} />
-            </StyledModal>
+                    show = {open}
+                    onHide = {() => setOpen(false)}
+                    renderBackdrop = {renderBackdrop}
+                >
+                    <PageNotion ID={getID(response)} />
+                </StyledModal>
         </div>
     )
 }
